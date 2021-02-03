@@ -11,6 +11,7 @@ https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/getting-started
 | Create Person | POST | /person | `{ "name":"aa","surname":"sur","email": "aa@asd.com","phone": "09989876543","gender": "male"}`
 | Update Person | PUT | /person | `{ "id":1,"name":"aa1","surname":"sur1","email": "email1@gmail.com","phone": "09989876543","gender": "male"}`
 | Delete Person | DELTE | /person/0-N | |
+| Seed sample Persons | GET | /persons/seed | |
 
 ## Installation
 
@@ -55,7 +56,7 @@ more information [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
 ```bash
 $ npm run build
 ```
-This will build all files inside `dist` folder and run pm2.
+This will build all files inside `dist` folder and run pm2 or via AWS Elastic Beanstalk.
 
 # Linting
 
