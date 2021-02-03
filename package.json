@@ -1,0 +1,34 @@
+{
+  "name": "expressts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc  --allowJs",
+    "dev": "ts-node-dev --respawn --transpile-only --rs --clear server/server.ts",
+    "test": "yarn mocha  --require ts-node/register --require source-map-support/register test/index.spec.ts --exit"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-validator": "^6.9.2",
+    "faker": "^5.3.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chai-things": "^0.2.0",
+    "codelyzer": "^6.0.1",
+    "mocha": "^8.2.1",
+    "supertest": "^6.1.1",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.3"
+  }
+}
