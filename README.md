@@ -1,6 +1,5 @@
-![ExpressTS](https://github.com/keithics/express-typescript/workflows/Node.js%20CI/badge.svg)
-# ExpressJS in Typescript
-This is a basic example on how to use typescript in express. Heavily inspired by [Microsoft Typescript Node Starter][https://github.com/microsoft/TypeScript-Node-Starter]
+# ExpressJS with MySQL in Typescript
+
 
 ## Installation
 
@@ -13,7 +12,23 @@ or via Yarn.
 ```bash
 $ yarn 
 ```
+Edit the config file depends on your server environment
+```javascript
+module.exports = {
+        MySQL_CON :{
+        connectionLimit : 10,
+        host: 'xx.xx.xx.xx',
+        user: 'root',
+        password: '',
+        database: 'restapi',
+        debug: false,
+        Promise: require('bluebird')
+        },
+        PORT: 3307,
+        HOST : 'localhost'
+}
 
+```
 
 # Running in development
 ```bash
@@ -28,11 +43,84 @@ more information [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
 
 ```bash
 $ npm run build
+
+```
+This will build all files inside `dist` folder and run pm2.
+
+# Automated Tests
+**_In order for this to work, you need to update your testing config json file._**
+
+```bash
+$ npm run test
 ```
 
+If you want to test via Postman, import `Rest API.postman_collection.json` to Postman
 
-This will build all files inside `dist` folder 
+#Testing Via cURL
 
+#### Paginate Data
+```bash
+curl -X GET --url 'http://localhost:3000/persons/page/0'
+````
+
+#### Get Person with id = 2
+```bash
+curl -X GET --url 'http://localhost:3000/person/2'
+````
+
+#### Create Person
+```bash
+curl -X POST \
+--url 'http://localhost:3000/person'  \
+-H 'Content-type: application/json' \
+
+--data-raw '{
+"name": "aa",
+"surname": "sur",
+"email": "aa@asd.com",
+"phone": "09989876543",
+"gender": "male"
+}'
+````
+
+#### Update Person
+```bash
+curl -X PUT \
+--url 'http://localhost:3000/person'  \
+-H 'Content-type: application/json' \
+
+--data-raw '{
+"id": 4,
+"name": "aa5",
+"surname": "sur1",
+"email": "aa@asd1.com",
+"phone": "09989876543"
+}'
+````
+
+#### Delete
+```bash
+curl -X DELETE \
+--url 'http://localhost:3000/person/1'  \
+-H 'Content-type: application/json' \
+
+--data-raw '{
+"id": 1,
+"name": "aa1",
+"surname": "sur1",
+"email": "aa@asd1.com",
+"phone": "09989876543",
+"gender": "female"
+}'
+````
+
+# API Documentation
+https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/getting-started
+
+# Code Documentation
+Please check the documentation folder
+
+ 
 # License
 
 MIT License
