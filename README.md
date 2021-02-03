@@ -1,5 +1,16 @@
 # ExpressJS with MySQL in Typescript
 
+### API
+https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/getting-started
+
+
+| DESCRIPTION | METHOD | URL | POST JSON PARAMS |
+| ------ | ------ |------ |------ |
+| Persons list | GET | /persons/page/0-N | |
+| Get One Person | GET | /persons/0-N | |
+| Create Person | POST | /person | `{ "name":"aa","surname":"sur","email": "aa@asd.com","phone": "09989876543","gender": "male"}`
+| Update Person | PUT | /person | `{ "id":1,"name":"aa1","surname":"sur1","email": "email1@gmail.com","phone": "09989876543","gender": "male"}`
+| Delete Person | DELTE | /person/0-N | |
 
 ## Installation
 
@@ -118,9 +129,6 @@ curl -X DELETE \
 "gender": "female"
 }'
 ````
-
-# API Documentation
-https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/getting-started
 
 # Code Documentation
 Please check the documentation folder
