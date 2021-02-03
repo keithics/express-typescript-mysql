@@ -5,6 +5,7 @@ import {Log} from '../libraries/Helpers';
 import {ErrorResponse, SuccessResponse} from '../libraries/Responses';
 import {MysqlSuccessInterface} from '../interfaces/mysql-success.interface';
 import {ErrorInterface} from '../interfaces/error.interface';
+import {PersonInterface} from '../interfaces/person.interfaces';
 
 /**
  * Crud for Persons table
@@ -26,7 +27,17 @@ export class PersonController{
      */
     async get(req: Request, res: Response): Promise<void | ErrorInterface | PersonInterface> {
         const id = +req.params.id || 0;
-        MySQL.findOne(this.table, {id}).then(response => SuccessResponse(res, response))
+        const columns = ['name','surname','age','gender','birthday','phone','email']
+        const fields = columns.map(c => `e.${c} as ${c}`);
+        const query = `
+        SELECT ${fields}, p.name AS contacts
+        FROM
+            \`${this.table}\` e
+            LEFT JOIN tbl_persons p ON p.id = ( SELECT id FROM tbl_persons as p2 WHERE p2.id = e.contacts )
+        WHERE
+            e.id = ?
+        `
+        MySQL.query(query, false,[id]).then(response => SuccessResponse(res, response))
              .catch(error => ErrorResponse(res, error));
 
     }
@@ -40,7 +51,7 @@ export class PersonController{
      */
     async list(req: Request, res: Response): Promise<void | ErrorInterface | PersonInterface[]> {
         const page = +req.params.page || 0;
-        MySQL.paginate(this.table, page).then(response => SuccessResponse(res, response))
+        MySQL.paginate(this.table,'email', page).then(response => SuccessResponse(res, response))
              .catch(error => ErrorResponse(res, error));
 
     }

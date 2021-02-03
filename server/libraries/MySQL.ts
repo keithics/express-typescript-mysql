@@ -39,7 +39,7 @@ export const MySQL = {
      * TODO :: creation a connection pool instead
      * @param query Query statement
      * @param isSingle true if you want to return a single object, otherwise false
-     * @param fieldsObject values of fields for prepared statements
+     * @param fieldsObject array of objeect values of fields for prepared statements
      */
     query : (query: string, isSingle: boolean = false,fieldsObject: any | null = {}) => {
         const fields = _.values(fieldsObject);
@@ -56,7 +56,7 @@ export const MySQL = {
                 throw err;
             })
             .finally( a => {
-                con.end()
+                con.destroy()
             })
     },
 
@@ -75,13 +75,15 @@ export const MySQL = {
 
     /**
      * Paginate table
+     * TODO make sort and order by dynamic
      * @param table  Table name
      * @param page Current page
      */
-    paginate: (table,page) : Promise<any> => {
+    paginate: (table,orderBy,page) : Promise<any> => {
         const limit = [page * GlobalPrefs.pagination.limit]
         const offset = GlobalPrefs.pagination.limit
-        return MySQL.query(`SELECT * FROM ${table} LIMIT ?,${offset}`, false, limit)
+        const sort = 'ASC'
+        return MySQL.query(`SELECT * FROM ${table} ORDER BY ${orderBy} ${sort} LIMIT ?,${offset}`, false, limit)
     },
 
     /**
@@ -131,7 +133,7 @@ export const MySQL = {
         const whereValue = MySQL.getWhereValues(whereField);
         const where = `${whereKey}=?`; // MyId = ?
         const query = `DELETE FROM ${table} WHERE ${where}`;
-        return MySQL.query(query,false,whereValue)
+        return MySQL.query(query,false,[whereValue])
     },
 
 

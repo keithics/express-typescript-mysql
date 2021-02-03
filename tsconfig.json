@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "pretty": true,
     "sourceMap": true,
     "target": "es6",
-    "outDir": "./dist",
+    "outDir": "./build",
     "baseUrl": "./server"
   },
   "include": [
