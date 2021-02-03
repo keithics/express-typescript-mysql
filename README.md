@@ -43,9 +43,14 @@ more information [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
 
 ```bash
 $ npm run build
-
 ```
 This will build all files inside `dist` folder and run pm2.
+
+# Linting
+
+```bash
+$ npm run lint
+```
 
 # Automated Tests
 **_In order for this to work, you need to update your testing config json file._**

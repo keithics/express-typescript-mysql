@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc  --allowJs",
+    "lint": "tslint server/**/**.ts",
     "dev": "ts-node-dev --respawn --transpile-only --rs --clear server/server.ts",
     "test": "yarn mocha  --require ts-node/register --require source-map-support/register tests/person.test.ts --exit"
   },
