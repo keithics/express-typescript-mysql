@@ -1,5 +1,14 @@
 # ExpressJS with MySQL in Typescript
 
+#### Features
+1. CRUD Operations
+2. With Join example
+3. Database Seeding
+4. With Validations
+5. Documented Code
+6. Automated Testing
+7. Code Linting
+
 ### API
 https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/getting-started
 
@@ -134,7 +143,10 @@ curl -X DELETE \
 # Code Documentation
 Please check the documentation folder
 
- 
+#TODO
+1. create mongodb version
+2. 100% code documentation coverage
+
 # License
 
 MIT License
