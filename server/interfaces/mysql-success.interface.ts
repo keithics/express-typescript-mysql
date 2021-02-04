@@ -1,3 +1,6 @@
+/**
+ * MySQL2 Success response for create, update and deletion
+ */
 export interface MysqlSuccessInterface{
     fieldCount: number;
     affectedRows: number;

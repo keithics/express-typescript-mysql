@@ -1,8 +1,16 @@
 import {_} from 'lodash';
 import {Log} from '../libraries/Helpers';
 
+/**
+ * Parses and returns error based on the Error Code
+ */
 export class ErrorHandlerController {
 
+    /**
+     * Error codes and message for fields with Unique attributes
+     * @param err
+     * @private
+     */
     private static getUniqueErrorMessage (err: any) {
         let output = '';
 
@@ -18,6 +26,10 @@ export class ErrorHandlerController {
         return output;
     };
 
+    /**
+     * Error Message based on the code
+     * @param err
+     */
     public static getErrorMessage(err: any) {
         let message = '';
         Log(err)

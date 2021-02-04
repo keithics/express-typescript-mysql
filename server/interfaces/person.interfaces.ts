@@ -1,3 +1,6 @@
+/**
+ * Person model interface
+ */
 export interface PersonInterface {
     id: number;
     name: string;

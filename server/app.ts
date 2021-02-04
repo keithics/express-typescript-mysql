@@ -5,6 +5,10 @@ import {IndexRoutes} from './routes';
 import * as path from 'path';
 import {PersonRoute} from './routes/person.route';
 
+/**
+ * All Express setups and configurations
+ * If you need to add a middleware, just add it here
+ */
 class App {
 
   public app: express.Application = express();
