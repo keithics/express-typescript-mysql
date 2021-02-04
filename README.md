@@ -13,19 +13,19 @@
 https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/api-endpoints/misc/list-persons
 
 
-| DESCRIPTION | METHOD | URL | POST JSON PARAMS |
+| DESCRIPTION | METHOD | URL | JSON PARAMS |
 | ------ | ------ |------ |------ |
 | Persons list | GET | /persons/page/`{person_id}` | |
 | Get One Person | GET | /persons/`{person_id}` | |
 | Get Person's Contacts | GET | /person/contacts/`{person_id}` | |
 | Create Person | POST | /person | `{ "name":"aa","surname":"sur","email": "aa@asd.com","phone": "09989876543","gender": "male"}`
 | Update Person | PUT | /person | `{ "id":1,"name":"aa1","surname":"sur1","email": "email1@gmail.com","phone": "09989876543","gender": "male"}`
-| Delete Person | DELTE | /person/`{person_id}` | |
+| Delete Person | DELETE | /person/`{person_id}` | |
 | Seed sample Persons | GET | /persons/seed | |
 
 ## Installation
 
-Simply run
+1. Simply run
 ```bash
 $ npm install 
 ```
@@ -34,7 +34,7 @@ or via Yarn.
 ```bash
 $ yarn 
 ```
-Edit the config file depends on your server environment
+3. Edit the config file depends on your server environment
 ```javascript
 module.exports = {
         MySQL_CON :{
@@ -51,6 +51,8 @@ module.exports = {
 }
 
 ```
+
+3. use the dump file to populate data or call the API to seed the database.
 
 # Running in development
 ```bash
@@ -152,6 +154,7 @@ Please check the documentation folder
 #TODO
 1. create mongodb version
 2. 100% code documentation coverage
+3. GraphQL
 
 # License
 
