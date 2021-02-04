@@ -37,6 +37,14 @@ describe('Running Persons test.. ', () => {
         .expect(200, done);
   });
 
+  it('/GET person/contacts/4 it should get person\'s contacts item with status 200', done => {
+    Request
+        .get('/person/contacts/4')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200, done);
+  });
+
   it('/PUT /person, it should update a person', done => {
     Request
         .put('/person')

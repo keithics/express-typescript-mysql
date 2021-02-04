@@ -27,19 +27,29 @@ export class PersonController{
      */
     async get(req: Request, res: Response): Promise<void | ErrorInterface | PersonInterface> {
         const id = +req.params.id || 0;
-        const columns = ['name','surname','age','gender','birthday','phone','email']
-        const fields = columns.map(c => `e.${c} as ${c}`);
-        const query = `
-        SELECT ${fields}, p.name AS contacts
-        FROM
-            \`${this.table}\` e
-            LEFT JOIN tbl_persons p ON p.id = ( SELECT id FROM tbl_persons as p2 WHERE p2.id = e.contacts )
-        WHERE
-            e.id = ?
-        `
-        MySQL.query(query, false,[id]).then(response => SuccessResponse(res, response))
+        MySQL.findOne(this.table, {id}).then(response => SuccessResponse(res, response))
              .catch(error => ErrorResponse(res, error));
+    }
 
+    /**
+     * Get Person's contact list based on the person_id
+     * @param req Express Request
+     * @param res Express Response
+     * @param req.page Current page
+     * @return Person Object
+     */
+    async contacts(req: Request, res: Response): Promise<void | ErrorInterface | PersonInterface> {
+        const id = +req.params.id || 0;
+        const query = `
+                SELECT
+                  c.*
+                FROM tbl_contacts p
+                JOIN tbl_persons c
+                  ON p.contact_id = c.id
+                WHERE p.person_id = ?
+        `
+        MySQL.query(query, false, {id}).then(response => SuccessResponse(res, response))
+             .catch(error => ErrorResponse(res, error));
     }
 
     /**
@@ -98,6 +108,7 @@ export class PersonController{
 
     /**
      * Seeds the database with random data
+     * Phone number format are not validated, for demo's sake only
      * @param req Express Request
      * @param res Express Response
      */

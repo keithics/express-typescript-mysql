@@ -22,6 +22,11 @@ export class PersonRoute {
         app.route('/persons/page/:page').get(this.personController.list.bind(this.personController))
 
         /**
+         * Get Person contacts
+         */
+        app.route('/person/contacts/:id').get(this.personController.contacts.bind(this.personController))
+
+        /**
          * Get one Person based on the id
          */
         app.route('/person/:id').get(this.personController.get.bind(this.personController))

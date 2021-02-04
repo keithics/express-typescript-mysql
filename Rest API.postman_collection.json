@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "6c8385d7-7897-46d5-b090-534980f75920",
-		"name": "Rest API",
+		"name": "Rest API v0.1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -55,6 +55,25 @@
 					"path": [
 						"person",
 						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Person contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/person/contacts/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"person",
+						"contacts",
+						"4"
 					]
 				}
 			},

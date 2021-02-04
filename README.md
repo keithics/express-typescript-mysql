@@ -10,16 +10,17 @@
 7. Code Linting
 
 ### API
-https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/getting-started
+https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/api-endpoints/misc/list-persons
 
 
 | DESCRIPTION | METHOD | URL | POST JSON PARAMS |
 | ------ | ------ |------ |------ |
-| Persons list | GET | /persons/page/0-N | |
-| Get One Person | GET | /persons/0-N | |
+| Persons list | GET | /persons/page/`{person_id}` | |
+| Get One Person | GET | /persons/`{person_id}` | |
+| Get Person's Contacts | GET | /person/contacts/`{person_id}` | |
 | Create Person | POST | /person | `{ "name":"aa","surname":"sur","email": "aa@asd.com","phone": "09989876543","gender": "male"}`
 | Update Person | PUT | /person | `{ "id":1,"name":"aa1","surname":"sur1","email": "email1@gmail.com","phone": "09989876543","gender": "male"}`
-| Delete Person | DELTE | /person/0-N | |
+| Delete Person | DELTE | /person/`{person_id}` | |
 | Seed sample Persons | GET | /persons/seed | |
 
 ## Installation
@@ -92,6 +93,11 @@ curl -X GET --url 'http://localhost:3000/persons/page/0'
 #### Get Person with id = 2
 ```bash
 curl -X GET --url 'http://localhost:3000/person/2'
+````
+
+#### Get Person's contacts with id = 4
+```bash
+curl -X GET --url 'http://localhost:3000/person/contacts/4' 
 ````
 
 #### Create Person

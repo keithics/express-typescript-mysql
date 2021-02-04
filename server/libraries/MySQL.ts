@@ -42,6 +42,7 @@ export const MySQL = {
      * @param fieldsObject array of objeect values of fields for prepared statements
      */
     query : (query: string, isSingle: boolean = false,fieldsObject: any | null = {}) => {
+//        Log(query);
         const fields = _.values(fieldsObject);
         const con = mysql.createConnection(config.MySQL_CON);
         return con.promise().execute(query,fields)
@@ -98,9 +99,6 @@ export const MySQL = {
         const values = _.map(objectValues,v => v || null);
         const placeHolders = new Array(fields.length).fill('?');
         const query = `INSERT INTO ${table} (${fields}) VALUES (${placeHolders})`;
-        Log(fields);
-        Log(query);
-        Log(values);
         return MySQL.query(query,false,values)
     },
 
