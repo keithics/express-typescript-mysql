@@ -61,19 +61,109 @@
 				<a href="#expressjs-with-mysql-in-typescript" id="expressjs-with-mysql-in-typescript" style="color: inherit; text-decoration: none;">
 					<h1>ExpressJS with MySQL in Typescript</h1>
 				</a>
+				<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+					<h4>Features</h4>
+				</a>
+				<ol>
+					<li>CRUD Operations</li>
+					<li>With Join example</li>
+					<li>Database Seeding</li>
+					<li>With Validations</li>
+					<li>Documented Code</li>
+					<li>Automated Testing</li>
+					<li>Code Linting</li>
+				</ol>
+				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+					<h3>API</h3>
+				</a>
+				<p><a href="https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/api-endpoints/misc/list-persons">https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/api-endpoints/misc/list-persons</a></p>
+				<table>
+					<thead>
+						<tr>
+							<th>DESCRIPTION</th>
+							<th>METHOD</th>
+							<th>URL</th>
+							<th>JSON PARAMS</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>Persons list</td>
+							<td>GET</td>
+							<td>/persons/page/<code>{person_id}</code></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Get One Person</td>
+							<td>GET</td>
+							<td>/persons/<code>{person_id}</code></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Get Person&#39;s Contacts</td>
+							<td>GET</td>
+							<td>/person/contacts/<code>{person_id}</code></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Create Person</td>
+							<td>POST</td>
+							<td>/person</td>
+							<td><code>{ &quot;name&quot;:&quot;aa&quot;,&quot;surname&quot;:&quot;sur&quot;,&quot;email&quot;: &quot;aa@asd.com&quot;,&quot;phone&quot;: &quot;09989876543&quot;,&quot;gender&quot;: &quot;male&quot;}</code></td>
+						</tr>
+						<tr>
+							<td>Update Person</td>
+							<td>PUT</td>
+							<td>/person</td>
+							<td><code>{ &quot;id&quot;:1,&quot;name&quot;:&quot;aa1&quot;,&quot;surname&quot;:&quot;sur1&quot;,&quot;email&quot;: &quot;email1@gmail.com&quot;,&quot;phone&quot;: &quot;09989876543&quot;,&quot;gender&quot;: &quot;male&quot;}</code></td>
+						</tr>
+						<tr>
+							<td>Delete Person</td>
+							<td>DELETE</td>
+							<td>/person/<code>{person_id}</code></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Seed sample Persons</td>
+							<td>GET</td>
+							<td>/persons/seed</td>
+							<td></td>
+						</tr>
+				</tbody></table>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
-				<p>Simply run</p>
-				<pre><code class="language-bash"><span style="color: #000000">$ npm install </span>
+				<ol>
+					<li>Simply run<pre><code class="language-bash"><span style="color: #000000">$ npm install </span>
 </code></pre>
+					</li>
+				</ol>
 				<p>or via Yarn.</p>
 				<pre><code class="language-bash"><span style="color: #000000">$ yarn </span>
 </code></pre>
-				<a href="#running-in-development" id="running-in-development" style="color: inherit; text-decoration: none;">
-					<h1>Running in development</h1>
-				</a>
-				<pre><code class="language-bash"><span style="color: #000000">$ npm run dev</span>
+				<ol start="3">
+					<li>Edit the config file depends on your server environment<pre><code class="language-javascript"><span style="color: #267F99">module</span><span style="color: #000000">.</span><span style="color: #267F99">exports</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">     </span><span style="color: #001080">MySQL_CON :</span><span style="color: #000000">{</span>
+<span style="color: #000000">     </span><span style="color: #001080">connectionLimit :</span><span style="color: #000000"> </span><span style="color: #098658">10</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">host:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xx.xx.xx.xx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">user:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;root&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">password:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">database:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;restapi&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">debug:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">Promise:</span><span style="color: #000000"> </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;bluebird&#039;</span><span style="color: #000000">)</span>
+<span style="color: #000000">     },</span>
+<span style="color: #000000">     </span><span style="color: #001080">PORT:</span><span style="color: #000000"> </span><span style="color: #098658">3307</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">HOST :</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;localhost&#039;</span>
+<span style="color: #000000">}</span>
+
+</code></pre>
+					</li>
+				</ol>
+				<pre><code>
+<span style="color: #098658">3.</span><span style="color: #000000"> </span><span style="color: #001080">use</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">dump</span><span style="color: #000000"> </span><span style="color: #001080">file</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">populate</span><span style="color: #000000"> </span><span style="color: #001080">data</span><span style="color: #000000"> </span><span style="color: #001080">or</span><span style="color: #000000"> </span><span style="color: #001080">call</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #0070C1">API</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">seed</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">database</span><span style="color: #000000">.</span>
+
+<span style="color: #000000"># </span><span style="color: #001080">Running</span><span style="color: #000000"> </span><span style="color: #0000FF">in</span><span style="color: #000000"> </span><span style="color: #001080">development</span>
+<span style="color: #A31515">```bash</span>
+<span style="color: #A31515">$ npm run dev</span>
 </code></pre>
 				<p>Type <code>rs</code> inside the terminal to manually restart the app.</p>
 				<p>more information <a href="https://www.npmjs.com/package/ts-node-dev">ts-node-dev</a></p>
@@ -82,12 +172,91 @@
 				</a>
 				<pre><code class="language-bash"><span style="color: #000000">$ npm run build</span>
 </code></pre>
-				<a href="#tests" id="tests" style="color: inherit; text-decoration: none;">
-					<h1>Tests</h1>
+				<p>This will build all files inside <code>dist</code> folder and run pm2 or via AWS Elastic Beanstalk.</p>
+				<a href="#linting" id="linting" style="color: inherit; text-decoration: none;">
+					<h1>Linting</h1>
 				</a>
+				<pre><code class="language-bash"><span style="color: #000000">$ npm run lint</span>
+</code></pre>
+				<a href="#automated-tests" id="automated-tests" style="color: inherit; text-decoration: none;">
+					<h1>Automated Tests</h1>
+				</a>
+				<p><strong><em>In order for this to work, you need to update your testing config json file.</em></strong></p>
 				<pre><code class="language-bash"><span style="color: #000000">$ npm run </span><span style="color: #795E26">test</span>
 </code></pre>
-				<p>This will build all files inside <code>dist</code> folder </p>
+				<p>If you want to test via Postman, import <code>Rest API.postman_collection.json</code> to Postman</p>
+				<p>#Testing Via cURL</p>
+				<a href="#paginate-data" id="paginate-data" style="color: inherit; text-decoration: none;">
+					<h4>Paginate Data</h4>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">curl -X GET --url </span><span style="color: #A31515">&#039;http://localhost:3000/persons/page/0&#039;</span>
+</code></pre>
+				<a href="#get-person-with-id--2" id="get-person-with-id--2" style="color: inherit; text-decoration: none;">
+					<h4>Get Person with id = 2</h4>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">curl -X GET --url </span><span style="color: #A31515">&#039;http://localhost:3000/person/2&#039;</span>
+</code></pre>
+				<a href="#get-person39s-contacts-with-id--4" id="get-person39s-contacts-with-id--4" style="color: inherit; text-decoration: none;">
+					<h4>Get Person&#39;s contacts with id = 4</h4>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">curl -X GET --url </span><span style="color: #A31515">&#039;http://localhost:3000/person/contacts/4&#039;</span><span style="color: #000000"> </span>
+</code></pre>
+				<a href="#create-person" id="create-person" style="color: inherit; text-decoration: none;">
+					<h4>Create Person</h4>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">curl -X POST \</span>
+<span style="color: #000000">--url </span><span style="color: #A31515">&#039;http://localhost:3000/person&#039;</span><span style="color: #000000">  \</span>
+<span style="color: #000000">-H </span><span style="color: #A31515">&#039;Content-type: application/json&#039;</span><span style="color: #000000"> \</span>
+
+<span style="color: #000000">--data-raw </span><span style="color: #A31515">&#039;{</span>
+<span style="color: #A31515">&quot;name&quot;: &quot;aa&quot;,</span>
+<span style="color: #A31515">&quot;surname&quot;: &quot;sur&quot;,</span>
+<span style="color: #A31515">&quot;email&quot;: &quot;aa@asd.com&quot;,</span>
+<span style="color: #A31515">&quot;phone&quot;: &quot;09989876543&quot;,</span>
+<span style="color: #A31515">&quot;gender&quot;: &quot;male&quot;</span>
+<span style="color: #A31515">}&#039;</span>
+</code></pre>
+				<a href="#update-person" id="update-person" style="color: inherit; text-decoration: none;">
+					<h4>Update Person</h4>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">curl -X PUT \</span>
+<span style="color: #000000">--url </span><span style="color: #A31515">&#039;http://localhost:3000/person&#039;</span><span style="color: #000000">  \</span>
+<span style="color: #000000">-H </span><span style="color: #A31515">&#039;Content-type: application/json&#039;</span><span style="color: #000000"> \</span>
+
+<span style="color: #000000">--data-raw </span><span style="color: #A31515">&#039;{</span>
+<span style="color: #A31515">&quot;id&quot;: 4,</span>
+<span style="color: #A31515">&quot;name&quot;: &quot;aa5&quot;,</span>
+<span style="color: #A31515">&quot;surname&quot;: &quot;sur1&quot;,</span>
+<span style="color: #A31515">&quot;email&quot;: &quot;aa@asd1.com&quot;,</span>
+<span style="color: #A31515">&quot;phone&quot;: &quot;09989876543&quot;</span>
+<span style="color: #A31515">}&#039;</span>
+</code></pre>
+				<a href="#delete" id="delete" style="color: inherit; text-decoration: none;">
+					<h4>Delete</h4>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">curl -X DELETE \</span>
+<span style="color: #000000">--url </span><span style="color: #A31515">&#039;http://localhost:3000/person/1&#039;</span><span style="color: #000000">  \</span>
+<span style="color: #000000">-H </span><span style="color: #A31515">&#039;Content-type: application/json&#039;</span><span style="color: #000000"> \</span>
+
+<span style="color: #000000">--data-raw </span><span style="color: #A31515">&#039;{</span>
+<span style="color: #A31515">&quot;id&quot;: 1,</span>
+<span style="color: #A31515">&quot;name&quot;: &quot;aa1&quot;,</span>
+<span style="color: #A31515">&quot;surname&quot;: &quot;sur1&quot;,</span>
+<span style="color: #A31515">&quot;email&quot;: &quot;aa@asd1.com&quot;,</span>
+<span style="color: #A31515">&quot;phone&quot;: &quot;09989876543&quot;,</span>
+<span style="color: #A31515">&quot;gender&quot;: &quot;female&quot;</span>
+<span style="color: #A31515">}&#039;</span>
+</code></pre>
+				<a href="#code-documentation" id="code-documentation" style="color: inherit; text-decoration: none;">
+					<h1>Code Documentation</h1>
+				</a>
+				<p>Please check the documentation folder</p>
+				<p>#TODO</p>
+				<ol>
+					<li>create mongodb version</li>
+					<li>100% code documentation coverage</li>
+					<li>GraphQL</li>
+				</ol>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h1>License</h1>
 				</a>
@@ -114,28 +283,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="modules.html">Exports</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/app.html">app</a>
+						<a href="modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/config_config.html">config/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/config_development_config.html">config/development/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/config_local_config.html">config/local/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/config_production_config.html">config/production/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/config_staging_config.html">config/staging/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/config_testing_config.html">config/testing/config</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/controllers.html">controllers</a>
@@ -175,9 +326,6 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/routes_person_route.html">routes/person.route</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/server.html">server</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/validators_person_validator.html">validators/person.validator</a>

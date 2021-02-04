@@ -151,6 +151,11 @@ curl -X DELETE \
 # Code Documentation
 Please check the documentation folder
 
+To update the documentation, just run
+```bash
+$ npm run doc
+```
+
 #TODO
 1. create mongodb version
 2. 100% code documentation coverage

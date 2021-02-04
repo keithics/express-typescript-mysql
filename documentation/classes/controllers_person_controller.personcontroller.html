@@ -102,6 +102,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="controllers_person_controller.personcontroller.html#contacts" class="tsd-kind-icon">contacts</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="controllers_person_controller.personcontroller.html#create" class="tsd-kind-icon">create</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="controllers_person_controller.personcontroller.html#delete" class="tsd-kind-icon">delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="controllers_person_controller.personcontroller.html#get" class="tsd-kind-icon">get</a></li>
@@ -138,7 +139,7 @@
 					<div class="tsd-signature tsd-kind-icon">table<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;tbl_persons&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/controllers/person.controller.ts#L18">controllers/person.controller.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L18">controllers/person.controller.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -151,6 +152,44 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="contacts" class="tsd-anchor"></a>
+					<h3>contacts</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">contacts<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/interfaces_error_interface.errorinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">ErrorInterface</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/interfaces_person_interfaces.personinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">PersonInterface</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L41">controllers/person.controller.ts:41</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get Person&#39;s contact list based on the person_id</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>req: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Express Request</p>
+									</div>
+								</li>
+								<li>
+									<h5>res: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Express Response</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/interfaces_error_interface.errorinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">ErrorInterface</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/interfaces_person_interfaces.personinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">PersonInterface</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Person Object</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="create" class="tsd-anchor"></a>
 					<h3>create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -160,7 +199,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/controllers/person.controller.ts#L65">controllers/person.controller.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L75">controllers/person.controller.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -198,7 +237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/controllers/person.controller.ts#L92">controllers/person.controller.ts:92</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L102">controllers/person.controller.ts:102</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -236,7 +275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/controllers/person.controller.ts#L28">controllers/person.controller.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L28">controllers/person.controller.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -274,7 +313,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/controllers/person.controller.ts#L52">controllers/person.controller.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L62">controllers/person.controller.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -312,12 +351,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/controllers/person.controller.ts#L104">controllers/person.controller.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L115">controllers/person.controller.ts:115</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Seeds the database with random data</p>
+									<p>Seeds the database with random data
+									Phone number format are not validated, for demo&#39;s sake only</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -349,7 +389,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/controllers/person.controller.ts#L78">controllers/person.controller.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/controllers/person.controller.ts#L88">controllers/person.controller.ts:88</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -383,28 +423,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="../modules.html">Exports</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/app.html">app</a>
+						<a href="../modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/config_config.html">config/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/config_development_config.html">config/development/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/config_local_config.html">config/local/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/config_production_config.html">config/production/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/config_staging_config.html">config/staging/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/config_testing_config.html">config/testing/config</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/controllers.html">controllers</a>
@@ -446,9 +468,6 @@
 						<a href="../modules/routes_person_route.html">routes/person.route</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/server.html">server</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="../modules/validators_person_validator.html">validators/person.validator</a>
 					</li>
 				</ul>
@@ -465,6 +484,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="controllers_person_controller.personcontroller.html#table" class="tsd-kind-icon">table</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="controllers_person_controller.personcontroller.html#contacts" class="tsd-kind-icon">contacts</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="controllers_person_controller.personcontroller.html#create" class="tsd-kind-icon">create</a>

@@ -73,11 +73,9 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#log" class="tsd-kind-icon">Log</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#mergedatetime" class="tsd-kind-icon">Merge<wbr>Date<wbr>Time</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#pickfields" class="tsd-kind-icon">Pick<wbr>Fields</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#returnreject" class="tsd-kind-icon">Return<wbr>Reject</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#returnresolve" class="tsd-kind-icon">Return<wbr>Resolve</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#round" class="tsd-kind-icon">Round</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#uniqueid" class="tsd-kind-icon">Unique<wbr>Id</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="libraries_helpers.html#padstring" class="tsd-kind-icon">pad<wbr>String</a></li>
 							</ul>
@@ -97,42 +95,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L16">libraries/Helpers.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/libraries/Helpers.ts#L29">libraries/Helpers.ts:29</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Simple console.log wrapper, all console logs should be removed automatically when running npm run prod</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>message: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>message object</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="mergedatetime" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> Merge<wbr>Date<wbr>Time</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">Merge<wbr>Date<wbr>Time<span class="tsd-signature-symbol">(</span>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NgTime</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L35">libraries/Helpers.ts:35</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>date: <span class="tsd-signature-type">Date</span></h5>
-								</li>
-								<li>
-									<h5>time: <span class="tsd-signature-type">NgTime</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -146,16 +126,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L12">libraries/Helpers.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/libraries/Helpers.ts#L21">libraries/Helpers.ts:21</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Maps and picks object properties</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>ob: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>object</p>
+									</div>
 								</li>
 								<li>
 									<h5>fields: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>fields to pick</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -172,13 +163,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L44">libraries/Helpers.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/libraries/Helpers.ts#L49">libraries/Helpers.ts:49</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Promise Rejects</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>message: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>message to return when rejecting a promise</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -195,39 +194,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L50">libraries/Helpers.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/libraries/Helpers.ts#L59">libraries/Helpers.ts:59</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Promise Resolves</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>message: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>message to return when resolving a promise</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="round" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> Round</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">Round<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L40">libraries/Helpers.ts:40</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>num: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -241,9 +225,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L25">libraries/Helpers.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/libraries/Helpers.ts#L41">libraries/Helpers.ts:41</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a unique and random UIDs</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
@@ -258,16 +247,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/7cc119a/server/libraries/Helpers.ts#L3">libraries/Helpers.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/keithics/express-typescript-mysql/blob/91379b7/server/libraries/Helpers.ts#L8">libraries/Helpers.ts:8</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a 0 for numbers less than length parameter</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>s: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number</p>
+									</div>
 								</li>
 								<li>
 									<h5>length: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 2</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>number of zeros infront</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -280,28 +280,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="../modules.html">Exports</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="app.html">app</a>
+						<a href="../modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="config_config.html">config/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="config_development_config.html">config/development/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="config_local_config.html">config/local/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="config_production_config.html">config/production/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="config_staging_config.html">config/staging/config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="config_testing_config.html">config/testing/config</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="controllers.html">controllers</a>
@@ -343,9 +325,6 @@
 						<a href="routes_person_route.html">routes/person.route</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="server.html">server</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="validators_person_validator.html">validators/person.validator</a>
 					</li>
 				</ul>
@@ -356,9 +335,6 @@
 						<a href="libraries_helpers.html#log" class="tsd-kind-icon">Log</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="libraries_helpers.html#mergedatetime" class="tsd-kind-icon">Merge<wbr>Date<wbr>Time</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="libraries_helpers.html#pickfields" class="tsd-kind-icon">Pick<wbr>Fields</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
@@ -366,9 +342,6 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="libraries_helpers.html#returnresolve" class="tsd-kind-icon">Return<wbr>Resolve</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="libraries_helpers.html#round" class="tsd-kind-icon">Round</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="libraries_helpers.html#uniqueid" class="tsd-kind-icon">Unique<wbr>Id</a>
