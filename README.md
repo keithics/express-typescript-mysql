@@ -158,7 +158,7 @@ $ npm run doc
 
 #TODO
 1. create mongodb version
-2. 100% code documentation coverage
+~~2. 100% code documentation coverage~~
 3. GraphQL
 
 # License
