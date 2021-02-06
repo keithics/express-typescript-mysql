@@ -1,6 +1,7 @@
 import {config} from '../config/config';
 import {Log, ReturnReject} from '../libraries/Helpers';
 import {GlobalPrefs} from './GlobalPrefs';
+import {PersonInterface} from '../interfaces/person.interfaces';
 const mysql = require('mysql2');
 const _ = require('lodash');
 
@@ -42,7 +43,8 @@ export const MySQL = {
      * @param fieldsObject array of objeect values of fields for prepared statements
      */
     query : (query: string, isSingle: boolean = false,fieldsObject: any | null = {}) => {
-//        Log(query);
+        Log(query);
+        Log(fieldsObject);
         const fields = _.values(fieldsObject);
         const con = mysql.createConnection(config.MySQL_CON);
         return con.promise().execute(query,fields)
@@ -80,7 +82,7 @@ export const MySQL = {
      * @param table  Table name
      * @param page Current page
      */
-    paginate: (table,orderBy,page) : Promise<any> => {
+    paginate: (table: string, orderBy:string,page: number) : Promise<any> => {
         const limit = [page * GlobalPrefs.pagination.limit]
         const offset = GlobalPrefs.pagination.limit
         const sort = 'ASC'
@@ -92,7 +94,7 @@ export const MySQL = {
      * @param table  Table name
      * @param data object of fields and values, data object keys must be the same with fields in the table
      */
-    create: (table: string, data: any) : Promise<any> => {
+    create: (table: string, data: PersonInterface) : Promise<any> => {
         const now = new Date();
         const objectValues = {...data, created: now, modified: now};
         const fields = Object.keys(objectValues);

@@ -4,6 +4,11 @@ import * as bodyParser from 'body-parser';
 import {IndexRoutes} from './routes';
 import * as path from 'path';
 import {PersonRoute} from './routes/person.route';
+import {graphqlHTTP} from 'express-graphql';
+import {Resolvers} from './graphql/resolvers';
+import {makeExecutableSchema} from 'graphql-tools';
+import {TypeDefs} from './graphql/types';
+
 
 /**
  * All Express setups and configurations
@@ -28,6 +33,17 @@ class App {
   }
 
   private config(): void{
+
+
+    this.app.use(
+        '/graphql',
+        graphqlHTTP({
+          schema:makeExecutableSchema({typeDefs:TypeDefs,resolvers: Resolvers}),
+          graphiql: true
+        }),
+    );
+
+
     this.app.use(helmet())
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));

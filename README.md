@@ -58,6 +58,7 @@ module.exports = {
 ```bash
 $ npm run dev
 ```
+By default, development config is loaded. You can change by editing the `NODE_ENV` to `development/staging/local/testing`
 
 Type `rs` inside the terminal to manually restart the app.
 
@@ -157,9 +158,10 @@ $ npm run doc
 ```
 
 #TODO
-1. create mongodb version
-~~2. 100% code documentation coverage~~
-3. GraphQL
+
+* create mongodb version
+* ~~100% code documentation coverage~~
+~~* GraphQL~~
 
 # License
 

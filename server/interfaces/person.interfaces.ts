@@ -2,15 +2,15 @@
  * Person model interface
  */
 export interface PersonInterface {
-    id: number;
+    id?: number;
     name: string;
     surname: string;
-    age: number;
-    gender: string;
-    birthday: string;
-    phone: string;
+    age?: number;
+    gender?: string;
+    birthday?: string | Date;
+    phone?: string;
     email: string;
-    contacts: string;
-    create: Date;
-    modified: Date;
+    contacts?: [string];
+    create?: Date;
+    modified?: Date;
 }
