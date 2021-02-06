@@ -8,6 +8,7 @@
 5. Documented Code
 6. Automated Testing
 7. Code Linting
+8. GraphQL
 
 ### API
 https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/api-endpoints/misc/list-persons
