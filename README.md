@@ -10,6 +10,12 @@
 7. Code Linting
 8. GraphQL
 
+### Live Demo
+Graph: http://139.162.2.185:3309/graphql
+
+API: http://139.162.2.185:3309/persons/page/0
+
+
 ### API
 https://www.apimatic.io/apidocs/keithics-rest-api/v/1_0#/http/api-endpoints/misc/list-persons
 
@@ -162,7 +168,7 @@ $ npm run doc
 
 * create mongodb version
 * ~~100% code documentation coverage~~
-~~* GraphQL~~
+* ~~GraphQL~~
 
 # License
 
