@@ -8,7 +8,7 @@
     "doc": "typedoc --out ./documentation server/**/**.ts\n",
     "lint": "tslint server/**/**.ts",
     "dev": "ts-node-dev --respawn --transpile-only --rs --clear server/server.ts",
-    "test": "yarn mocha  --require ts-node/register --require source-map-support/register tests/person.test.ts --exit"
+    "test": "yarn mocha  --require ts-node/register --require source-map-support/register tests/**.test.ts --exit"
   },
   "dependencies": {
     "bluebird": "^3.7.2",

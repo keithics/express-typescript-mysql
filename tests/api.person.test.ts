@@ -2,7 +2,7 @@ process.env.NODE_ENV = `testing`;
 import {Request} from './Request';
 
 
-describe('Running Persons test.. ', () => {
+describe('Running REST API Persons test.. ', () => {
 
   beforeEach(() => {
       // run database seed
