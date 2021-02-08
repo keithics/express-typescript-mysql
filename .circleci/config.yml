@@ -2,7 +2,7 @@ jobs:
   test:
     executor:
       name: node/default
-      tag: '13.10.1'
+      tag: '13'
     steps:
       - checkout
       - node/install-packages:
