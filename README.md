@@ -1,5 +1,9 @@
 # ExpressJS with MySQL in Typescript
 [![<TypescriptMySQLExpress>](https://circleci.com/gh/keithics/express-typescript-mysql.svg?style=svg)](<LINK>)
+
+![alt text][logo]
+
+[logo]: https://github.com/keithics/express-typescript-mysql/blob/Staging/logo/logo.png "Logo"
 #### Features
 1. CRUD Operations
 2. With Join example
